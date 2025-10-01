@@ -15,9 +15,9 @@ def load_function(module_name, function_name):
     module = importlib.import_module(module_name)
     return getattr(module, function_name)
 
-def load_test_cases(json_path):
-    with open(json_path, 'r') as f:
-        return json.load(f)
+def load_test_cases(path):
+    with open(path) as f:
+        return [case for case in json.load(f) if case["language"] == "python"]
 
 def make_test(case):
     def test(self):
@@ -32,6 +32,6 @@ class DynamicFunctionTests(unittest.TestCase):
 
 # Attach each test case as a method
 for i, case in enumerate(load_test_cases("test_functions.json")):
-    test_name = f"test_{case['function']}_{i}"
+    test_name = f"test_{case['function']}_{i}_{case['language']}"
     test_method = make_test(case)
     setattr(DynamicFunctionTests, test_name, test_method)

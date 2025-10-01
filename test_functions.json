@@ -1,12 +1,28 @@
 [
   {
+    "language": "python",
     "module": "utils.math_utils",
     "function": "add",
     "args": [2, 3],
     "expected": 5
   },
   {
+    "language": "c",
+    "library": "./build/libmath_utils.so",
+    "function": "add",
+    "args": [2, 3],
+    "expected": 5
+  },
+  {
+    "language": "python",
     "module": "utils.string_utils",
+    "function": "capitalize",
+    "args": ["hello"],
+    "expected": "Hello"
+  },
+  {
+    "language": "c",
+    "library": "./build/libstring_utils.so",
     "function": "capitalize",
     "args": ["hello"],
     "expected": "Hello"
