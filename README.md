@@ -1,11 +1,12 @@
 # Project Title
 
-unit_test.py
+unit_test_harness
 
 ## Description
 
 Script to run unit test for multiple code base (C, Python)
 - Generates Pass/Fail output for each function in a predefined set
+- Dynamically loads predefined test parameters from JSON
 
 ## Getting Started
 
