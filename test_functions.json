@@ -1,0 +1,14 @@
+[
+  {
+    "module": "utils.math_utils",
+    "function": "add",
+    "args": [2, 3],
+    "expected": 5
+  },
+  {
+    "module": "utils.string_utils",
+    "function": "capitalize",
+    "args": ["hello"],
+    "expected": "Hello"
+  }
+]

@@ -17,7 +17,7 @@ Script to run unit test for multiple code base (C, Python)
 * How to run the program
 * Step-by-step bullets
 ```
-python3 -m unittest discover
+python3 -m unittest discover -v
 
 ```
 
